@@ -1,0 +1,71 @@
+
+
+<html>
+     
+      <head>
+          <title> Medications</title>
+      </head>
+
+      <body background="medication.jpg">
+
+
+      
+        <h2><b>View medications given by doctors</b></body></h2>
+
+
+     <table>
+                 <tr>
+                <h3> <td>Enter prescription number: </td></h3>
+                     <td>
+                          <input type="number" id="number" name="number"value="">
+                    </td>
+                    <td id="numberError"></td>
+                 </tr>
+                 
+                <tr>
+                    <td> </td>
+                    <td>
+                         <input type="button" name="submit" value="submit" onclick="validation()">
+                   </td>
+                </tr>
+                 </table>
+
+                 <ul>
+                    
+                    
+     
+                       <li>
+                        <h3> <a href="dashboard.php " onclick="log()">Back</a> </h3> 
+     
+                     </li>
+     
+                     
+                 </ul>  
+                 <script>
+                   function log() {
+                  alert("Are You Sure you want to go ?");
+                  }
+     
+     
+                 </script>
+     
+                 <script>
+                    function validation() {
+                    
+                     
+                        let number  = document.getElementById('number').value;
+                    
+                        if ((number.length) ==0) {
+                            document.getElementById('numberError').innerHTML = "field can not be null";
+                    }
+                    else
+                    {
+                        document.getElementById('numberError').innerHTML = "";
+                    }
+                }
+                </script>  
+           
+              
+     </body>>
+
+</html>

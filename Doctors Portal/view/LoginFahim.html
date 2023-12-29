@@ -1,0 +1,68 @@
+
+<html>
+      <head>
+          <title>Login</title>>
+      </head>>
+ 
+      <body>
+        
+             <table>
+                 <tr>
+                     <td> Username</td>
+                     <td>
+                          <input type="text" id="Username" name="Username"  value="">
+                    </td>
+                    <td id="usere"></td>
+                 </tr>
+                 <tr>
+                    <td> Password</td>
+                    <td>
+                         <input type="password" id="Password" name="Password"  value="">
+                   </td>
+                   <td id="passworde"></td>
+                   
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                         <input type="button" name="submit" value="submit" onclick="validation()">
+                   </td>
+                   
+                </tr>
+                 </table>>
+          <ul>
+                 <li> 
+                <a href="Signup.php">signup</a>
+                </li>
+        </ul>   
+            </table>
+
+
+        <script>
+            function validation() {
+                let username = document.getElementById('Username').value;
+                let password = document.getElementById('Password').value;
+
+                if ((username.length) > 5 && (password.length) > 8) {
+
+                    
+                   window.location = 'dashboard.php';
+
+                     }
+
+                
+                if ((username.length) < 5) {
+                    document.getElementById('usere').innerHTML = "Username should be 5 character long";
+                }
+                if ((password.length) < 8) {
+                    document.getElementById('passworde').innerHTML = "Password should be 8 character long";
+                }
+                else {
+                    document.getElementById('usere').innerHTML = "";
+                    document.getElementById('passworde').innerHTML = "";
+                }
+            }
+        </script>         
+     </body>
+
+</html>
